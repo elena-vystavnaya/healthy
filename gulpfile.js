@@ -15,8 +15,7 @@ var gulp          = require('gulp'),
 
 
 var sassfiles = [
-  "app/sass/main.scss",
-  "app/sass/**/*.scss"
+  "app/sass/style.scss",
 ];
 
 var jsfiles = [
@@ -43,8 +42,6 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('sass', function(){
   return gulp.src(sassfiles)
- 
-    .pipe(concat('style.scss'))
     .pipe(sass())
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
     .pipe(cssnano()) // Сжимаем
@@ -85,7 +82,7 @@ gulp.task('watch', ['browser-sync', 'sass', 'libs-css', 'js', 'libs-js'], functi
 });
 
 gulp.task('clean', function() {
-  return del.sync(['css', 'js', 'img', 'webfonts']); // Удаляем папку dist перед сборкой
+  return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
 
 gulp.task('img', function() {
@@ -96,7 +93,7 @@ gulp.task('img', function() {
           svgoPlugins: [{removeViewBox: false}],
           use: [pngquant()]
       })))
-      .pipe(gulp.dest('img')); // Выгружаем на продакшен
+      .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
 gulp.task('build', ['clean', 'img', 'sass', 'libs-css', 'js', 'libs-js'], function() {
@@ -105,19 +102,19 @@ gulp.task('build', ['clean', 'img', 'sass', 'libs-css', 'js', 'libs-js'], functi
       'app/css/style.min.css',
       'app/css/libs.min.css'
       ])
-  .pipe(gulp.dest('css'));
+  .pipe(gulp.dest('dist/css'));
 
   var buildFonts = gulp.src('app/webfonts/**/*') // Переносим шрифты в продакшен
-  .pipe(gulp.dest('webfonts'));
+  .pipe(gulp.dest('dist/fonts'));
 
   var buildJs = gulp.src([ // Переносим CSS стили в продакшен
     'app/js/index.min.js',
     'app/js/libs.min.js'
     ]) // Переносим скрипты в продакшен
-  .pipe(gulp.dest('js'));
+  .pipe(gulp.dest('dist/js'));
 
   var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
-  .pipe(gulp.dest(''));
+  .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clear', function () {
@@ -125,4 +122,3 @@ gulp.task('clear', function () {
 });
 
 gulp.task('default', ['watch']);
-
