@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header id='home'>
+        <!--Фоновое изображение-->
+        <picture>
+            <source srcset="img/bg_small.jpg" media="(max-width: 576px)">
+            <source srcset="img/bg_768.jpg" media="(min-width: 576px)">
+            <source srcset="img/bg_992.jpg" media="(min-width: 768px)">
+            <source srcset="img/bg_1200.jpg" media="(min-width: 992px)">
+            <source srcset="img/bg_big.jpg" media="(min-width: 1200px)">
+        </picture>
+        <img src="img/bg_big.jpg" alt="background" class="img-fluid">      
+        <!--Содержание-->
+        <div class="container">
+            <div class="heading clearfix ">
+                <!--Меню-->
+                <div class="hat">
+                    <div class="logo">
+                        <h3>health</h3>
+                    </div>
+                    <nav id='menu'>
+                        <ul class="menu">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About us</a>
+                            </li>
+                            <li>
+                                <a href="#shop">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#blog">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact us</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-shopping-cart"></i>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!--Заголовок-->
+            <div class="titles col">
+                <h1>
+                        Welcome to our shop!
+                </h1>   
+                <h2>
+                        ORGANIC FRUITS, VEGETABLES, AND LOT MORE TO YOUR DOOR
+                </h2>                   
+            </div>
+        </div>
+    </header>
+
+    <section id='all-product'>
+        <div class="container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="nav justify-content-center carousel-indicators">   
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active" class="nav-item">organic <span>fruits</span></li>
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1" class="nav-item">organic <span>vegetables</span></li>
+                    <img src="img/organic.png" alt="organic" class='img-fluid'>
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="2" class="nav-item">organic <span>juices</span></li>
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="3" class="nav-item">organic <span>dried fruits</span></li>            
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product1.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product2.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span></p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product3.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product4.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product5.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                            <div class="container">
+                                <div class="row justify-content-between">
+                                    <div class="product col-sm">
+                                        <div class="image">
+                                            <img src="img/product1.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text">
+                                            <p>organic <span>tomato</span> </p>
+                                            <p class="price">$50.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="product col-sm">
+                                        <div class="image">
+                                            <img src="img/product2.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text">
+                                            <p>organic <span>tomato</span></p>
+                                            <p class="price">$50.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="product col-sm">
+                                        <div class="image">
+                                            <img src="img/product3.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text">
+                                            <p>organic <span>tomato</span> </p>
+                                            <p class="price">$50.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="product col-sm">
+                                        <div class="image">
+                                            <img src="img/product4.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text">
+                                            <p>organic <span>tomato</span> </p>
+                                            <p class="price">$50.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="product col-sm">
+                                        <div class="image">
+                                            <img src="img/product5.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text">
+                                            <p>organic <span>tomato</span> </p>
+                                            <p class="price">$50.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product1.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product2.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span></p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product3.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product4.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product5.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product1.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product2.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span></p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product3.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product4.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-sm">
+                                    <div class="image">
+                                        <img src="img/product5.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                      
+    </section>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="libs/js/bootstrap.min.js"></script>
+</body>
+</html>
