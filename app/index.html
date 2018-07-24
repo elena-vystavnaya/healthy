@@ -13,75 +13,62 @@
 </head>
 <body>
     <header id='home'>
-        <!--Фоновое изображение-->
-        <picture>
-            <source srcset="img/bg_small.jpg" media="(max-width: 576px)">
-            <source srcset="img/bg_768.jpg" media="(min-width: 576px)">
-            <source srcset="img/bg_992.jpg" media="(min-width: 768px)">
-            <source srcset="img/bg_1200.jpg" media="(min-width: 992px)">
-            <source srcset="img/bg_big.jpg" media="(min-width: 1200px)">
-        </picture>
-        <img src="img/bg_big.jpg" alt="background" class="img-fluid">      
         <!--Содержание-->
-        <div class="container">
-            <div class="heading clearfix ">
-                <!--Меню-->
-                <div class="hat">
-                    <div class="logo">
-                        <h3>health</h3>
+        <div class="container header-container">          
+            <!--Меню-->  
+                <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+                        <a class="navbar-brand" href="#">Health
+                            <img src="img/sheet.png" alt="logo">
+                        </a>  
+                        
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="#">Home</a>
+                        <a class="nav-item nav-link" href="#">About us</a>
+                        <a class="nav-item nav-link" href="#">Shop</a>
+                        <a class="nav-item nav-link" href="#">Blog</a>
+                        <a class="nav-item nav-link" href="#">Contact us</a>
+                        <a class="nav-item nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
                     </div>
-                    <nav id='menu'>
-                        <ul class="menu">
-                            <li>
-                                <a href="#home">Home</a>
-                            </li>
-                            <li>
-                                <a href="#about">About us</a>
-                            </li>
-                            <li>
-                                <a href="#shop">Shop</a>
-                            </li>
-                            <li>
-                                <a href="#blog">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#contact">Contact us</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-shopping-cart"></i>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <!--Заголовок-->
-            <div class="titles col">
-                <h1>
-                        Welcome to our shop!
-                </h1>   
-                <h2>
-                        ORGANIC FRUITS, VEGETABLES, AND LOT MORE TO YOUR DOOR
-                </h2>                   
-            </div>
+                </nav>
+            <div class="titles">
+                <h1>Welcome to our shop!</h1>   
+                <h2>ORGANIC FRUITS, VEGETABLES, AND LOT MORE TO YOUR DOOR</h2> 
         </div>
+        </div> 
+        
     </header>
 
     <section id='all-product'>
         <div class="container">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="false">
-                <ol class="nav justify-content-center carousel-indicators">   
-                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active" class="nav-item">organic <span>fruits</span></li>
-                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1" class="nav-item">organic <span>vegetables</span></li>
-                    <img src="img/organic.png" alt="organic" class='img-fluid'>
-                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="2" class="nav-item">organic <span>juices</span></li>
-                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="3" class="nav-item">organic <span>dried fruits</span></li>            
+                <!--<img src="img/organic.png" alt="organic" class='img-fluid'>-->
+                <ol class="carousel-indicators nav"> 
+                        <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active" class="nav-item">organic <span>fruits</span></li>
+                        <li data-target="#carouselExampleSlidesOnly" data-slide-to="1" class="nav-item">organic <span>vegetables</span></li>      
+                        <li data-target="#carouselExampleSlidesOnly" data-slide-to="2" class="nav-item">organic <span>juices</span></li>
+                        <li data-target="#carouselExampleSlidesOnly" data-slide-to="3" class="nav-item">organic <span>dried fruits</span></li>
                 </ol>
-
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="container">
-                            <div class="row justify-content-between">
-                                <div class="product col-sm">
+                            <div class="row justify-content-beetwen">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
                                     <div class="image">
                                         <img src="img/product1.png" alt="" class="img-fluid">
                                     </div>
@@ -90,7 +77,18 @@
                                         <p class="price">$50.00</p>
                                     </div>
                                 </div>
-                                <div class="product col-sm">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="far fa-heart"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-shopping-basket"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
                                     <div class="image">
                                         <img src="img/product2.png" alt="" class="img-fluid">
                                     </div>
@@ -99,7 +97,18 @@
                                         <p class="price">$50.00</p>
                                     </div>
                                 </div>
-                                <div class="product col-sm">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="far fa-heart"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-shopping-basket"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
                                     <div class="image">
                                         <img src="img/product3.png" alt="" class="img-fluid">
                                     </div>
@@ -108,7 +117,18 @@
                                         <p class="price">$50.00</p>
                                     </div>
                                 </div>
-                                <div class="product col-sm">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="far fa-heart"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-shopping-basket"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
                                     <div class="image">
                                         <img src="img/product4.png" alt="" class="img-fluid">
                                     </div>
@@ -117,109 +137,18 @@
                                         <p class="price">$50.00</p>
                                     </div>
                                 </div>
-                                <div class="product col-sm">
-                                    <div class="image">
-                                        <img src="img/product5.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="text">
-                                        <p>organic <span>tomato</span> </p>
-                                        <p class="price">$50.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                            <div class="container">
-                                <div class="row justify-content-between">
-                                    <div class="product col-sm">
-                                        <div class="image">
-                                            <img src="img/product1.png" alt="" class="img-fluid">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="far fa-heart"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-shopping-basket"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-secondary">
+                                                <i class="fas fa-expand"></i>
+                                            </button>
                                         </div>
-                                        <div class="text">
-                                            <p>organic <span>tomato</span> </p>
-                                            <p class="price">$50.00</p>
-                                        </div>
-                                    </div>
-                                    <div class="product col-sm">
-                                        <div class="image">
-                                            <img src="img/product2.png" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="text">
-                                            <p>organic <span>tomato</span></p>
-                                            <p class="price">$50.00</p>
-                                        </div>
-                                    </div>
-                                    <div class="product col-sm">
-                                        <div class="image">
-                                            <img src="img/product3.png" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="text">
-                                            <p>organic <span>tomato</span> </p>
-                                            <p class="price">$50.00</p>
-                                        </div>
-                                    </div>
-                                    <div class="product col-sm">
-                                        <div class="image">
-                                            <img src="img/product4.png" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="text">
-                                            <p>organic <span>tomato</span> </p>
-                                            <p class="price">$50.00</p>
-                                        </div>
-                                    </div>
-                                    <div class="product col-sm">
-                                        <div class="image">
-                                            <img src="img/product5.png" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="text">
-                                            <p>organic <span>tomato</span> </p>
-                                            <p class="price">$50.00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="row justify-content-between">
-                                <div class="product col-sm">
-                                    <div class="image">
-                                        <img src="img/product1.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="text">
-                                        <p>organic <span>tomato</span> </p>
-                                        <p class="price">$50.00</p>
-                                    </div>
-                                </div>
-                                <div class="product col-sm">
-                                    <div class="image">
-                                        <img src="img/product2.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="text">
-                                        <p>organic <span>tomato</span></p>
-                                        <p class="price">$50.00</p>
-                                    </div>
-                                </div>
-                                <div class="product col-sm">
-                                    <div class="image">
-                                        <img src="img/product3.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="text">
-                                        <p>organic <span>tomato</span> </p>
-                                        <p class="price">$50.00</p>
-                                    </div>
-                                </div>
-                                <div class="product col-sm">
-                                    <div class="image">
-                                        <img src="img/product4.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="text">
-                                        <p>organic <span>tomato</span> </p>
-                                        <p class="price">$50.00</p>
-                                    </div>
-                                </div>
-                                <div class="product col-sm">
                                     <div class="image">
                                         <img src="img/product5.png" alt="" class="img-fluid">
                                     </div>
@@ -234,7 +163,18 @@
                     <div class="carousel-item">
                         <div class="container">
                             <div class="row justify-content-between">
-                                <div class="product col-sm">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
                                     <div class="image">
                                         <img src="img/product1.png" alt="" class="img-fluid">
                                     </div>
@@ -243,7 +183,18 @@
                                         <p class="price">$50.00</p>
                                     </div>
                                 </div>
-                                <div class="product col-sm">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
                                     <div class="image">
                                         <img src="img/product2.png" alt="" class="img-fluid">
                                     </div>
@@ -252,7 +203,18 @@
                                         <p class="price">$50.00</p>
                                     </div>
                                 </div>
-                                <div class="product col-sm">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
                                     <div class="image">
                                         <img src="img/product3.png" alt="" class="img-fluid">
                                     </div>
@@ -261,7 +223,18 @@
                                         <p class="price">$50.00</p>
                                     </div>
                                 </div>
-                                <div class="product col-sm">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
                                     <div class="image">
                                         <img src="img/product4.png" alt="" class="img-fluid">
                                     </div>
@@ -270,7 +243,230 @@
                                         <p class="price">$50.00</p>
                                     </div>
                                 </div>
-                                <div class="product col-sm">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product5.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product1.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product2.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span></p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product3.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product4.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product5.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product1.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product2.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span></p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product3.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image">
+                                        <img src="img/product4.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="text">
+                                        <p>organic <span>tomato</span> </p>
+                                        <p class="price">$50.00</p>
+                                    </div>
+                                </div>
+                                <div class="product col-lg">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
                                     <div class="image">
                                         <img src="img/product5.png" alt="" class="img-fluid">
                                     </div>
@@ -288,5 +484,7 @@
     </section>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="libs/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>
