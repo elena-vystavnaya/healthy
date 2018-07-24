@@ -19,16 +19,11 @@ var sassfiles = [
 ];
 
 var jsfiles = [
-  "app/libs/jquery/jquery.min.js",
-  "app/libs/owl.carousel/owl.carousel.min.js",
-  "app/libs/wow/wow.min.js"
+  "app/libs/js/*.js"
 ];
 
 var cssfiles = [
-    "app/libs/owl.carousel/owl.carousel.min.css",
-    "app/libs/owl.carousel/owl.theme.default.min.css",
-    "app/libs/wow/animate.css",
-    "app/libs/fontawesome/all.min.css"
+    "app/libs/css/*.css"
 ];
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
@@ -59,7 +54,7 @@ gulp.task('libs-css', function(){
 });
 
 gulp.task('js', function() {
-  return gulp.src('app/js/index.js')
+  return gulp.src('app/js/script.js')
     .pipe(uglify())
     .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
     .pipe(gulp.dest('app/js'));
@@ -73,16 +68,16 @@ gulp.task('libs-js', function() {
     .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('watch', ['browser-sync', 'sass', 'libs-css', 'js', 'libs-js'], function(){
+/*gulp.task('watch', ['browser-sync', 'sass', 'libs-css', 'js', 'libs-js'], function(){
     gulp.watch(sassfiles, [sass]);
     gulp.watch(cssfiles, [libs-css]);
     gulp.watch('app/js/index.js', [js]);
     gulp.watch(jsfiles, [libs-js]); 
     gulp.watch('app/*.html', browserSync.reload()); // Наблюдение за HTML файлами в корне проекта
-});
+});*/
 
 gulp.task('clean', function() {
-  return del.sync('dist'); // Удаляем папку dist перед сборкой
+  return del.sync(['img', 'js', 'css', 'fonts']); // Удаляем папку dist перед сборкой
 });
 
 gulp.task('img', function() {
@@ -93,7 +88,7 @@ gulp.task('img', function() {
           svgoPlugins: [{removeViewBox: false}],
           use: [pngquant()]
       })))
-      .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
+      .pipe(gulp.dest('img')); // Выгружаем на продакшен
 });
 
 gulp.task('build', ['clean', 'img', 'sass', 'libs-css', 'js', 'libs-js'], function() {
@@ -102,19 +97,19 @@ gulp.task('build', ['clean', 'img', 'sass', 'libs-css', 'js', 'libs-js'], functi
       'app/css/style.min.css',
       'app/css/libs.min.css'
       ])
-  .pipe(gulp.dest('dist/css'));
+  .pipe(gulp.dest('css'));
 
   var buildFonts = gulp.src('app/webfonts/**/*') // Переносим шрифты в продакшен
-  .pipe(gulp.dest('dist/fonts'));
+  .pipe(gulp.dest('fonts'));
 
   var buildJs = gulp.src([ // Переносим CSS стили в продакшен
-    'app/js/index.min.js',
+    'app/js/script.min.js',
     'app/js/libs.min.js'
     ]) // Переносим скрипты в продакшен
-  .pipe(gulp.dest('dist/js'));
+  .pipe(gulp.dest('js'));
 
   var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
-  .pipe(gulp.dest('dist'));
+  .pipe(gulp.dest(''));
 });
 
 gulp.task('clear', function () {
