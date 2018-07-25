@@ -12,11 +12,11 @@
   background-position: center center;
   background-size: cover; }
   #home .header-container {
-    position: relative; }
+    display: flex;
+    flex-direction: column; }
   #home nav {
     background: transparent !important;
-    width: 100%;
-    z-index: 100; }
+    width: 100%; }
     #home nav .nav-item {
       text-transform: uppercase; }
     #home nav .navbar-brand {
@@ -31,11 +31,9 @@
   #home .col {
     text-align: center; }
   #home .titles {
-    text-align: center;
     text-transform: uppercase;
-    left: 8%;
-    top: 30%;
-    position: absolute; }
+    margin: auto;
+    text-align: center; }
   #home h1 {
     font-size: 6vmax; }
   #home h2 {
@@ -62,8 +60,7 @@
     min-height: 438px; } }
 @media screen and (min-width: 992px) {
   #home {
-    background: url(../img/bg_1200.jpg) no-repeat;
-    min-height: 685px; }
+    background: url(../img/bg_1200.jpg) no-repeat; }
 
   .header-container {
     min-height: 438px; } }
@@ -95,10 +92,13 @@
   padding-bottom: 100px; }
   #all-product .carousel-indicators {
     position: static;
-    margin: 0; }
+    margin: 0;
+    padding-top: 100px; }
     #all-product .carousel-indicators li {
       text-indent: 0;
-      position: static; }
+      position: static;
+      margin-right: 20px;
+      margin-bottom: 20px; }
     #all-product .carousel-indicators .active {
       background: #9f9e9c;
       color: #ffffff; }
@@ -110,7 +110,6 @@
     height: 45px;
     border: 2px #9f9e9c solid;
     border-radius: 15px;
-    margin: 100px 10px 0 10px;
     text-align: center;
     padding: 8px 0; }
     #all-product li:hover {
@@ -132,7 +131,7 @@
   position: relative;
   height: 300px;
   padding: 0;
-  margin: 20px;
+  margin: 23px;
   margin-bottom: 35px;
   width: 100%; }
   .product:hover {
@@ -181,5 +180,8 @@
 @media screen and (min-width: 768px) {
   #all-product li {
     width: 211px; } }
+@media screen and (max-width: 992px) {
+  .product {
+    width: 75%; } }
 
 /*# sourceMappingURL=style.css.map */
